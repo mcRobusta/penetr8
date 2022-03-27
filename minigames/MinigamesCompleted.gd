@@ -1,10 +1,9 @@
-extends Area2D
+extends Node
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var bait_score = 0
+var phising_passed = false
+var DDOS_passed = false
+var download_passed = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,8 +13,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Computer_body_entered(body):
-	if body.name == "Player":
-		get_tree().change_scene("res://minigames/DDOS/DDOS.tscn")

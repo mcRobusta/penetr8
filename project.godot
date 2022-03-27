@@ -14,6 +14,10 @@ config/name="penetr8"
 run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+MinigamesCompleted="*res://minigames/MinigamesCompleted.gd"
+
 [input]
 
 left={
