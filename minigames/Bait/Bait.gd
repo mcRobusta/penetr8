@@ -1,16 +1,26 @@
 extends Node
 
+var inputArray = [true, true, true, true, true, true, true, true, true]
+var targetArray = []
+var rng = RandomNumberGenerator.new()
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-
+"""if black:
+			texture = load("res://minigames/Bait/white-square.png")
+		else:
+			texture = load("res://minigames/Bait/black-square.png")"""
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	produceRandomInput()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func produceRandomInput():
+	targetArray = []
+	for x in range(9):
+		rng.randomize()
+		if rng.randi_range(0, 1) == 1:
+			targetArray.append(true)
+		else:
+			targetArray.append(false)
