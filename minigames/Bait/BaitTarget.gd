@@ -17,7 +17,7 @@ func _ready():
 		if BaitTargetArray.inputArray[x] != BaitTargetArray.targetArray[x]:
 			probability += 1
 	probability = probability * 0.11
-	print(probability)
+	MinigamesCompleted.bait_score = probability
 	BaitTargetArray.targetArray = []
 	for x in range(9):
 		rng.randomize()
